@@ -1,36 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Orin Chandra Pal.</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <div class="background one"></div>
-  <div class="background two"></div>
-  <div class="background three"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Orin Chandra Pal.</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="background one"></div>
+    <div class="background two"></div>
+    <div class="background three"></div>
 
-  <header id="header">
-    <nav id="nav">
-      <div class="logo">
-        <a href="#">OCP</a>
-      </div>
+    <header id="header">
+      <nav id="nav" class="container">
+        <div class="logo">
+          <a href="#">OCP</a>
+        </div>
 
-      <div class="nav-links">
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Projects</a>
-        <a href="#">Skill</a>
-        <a href="#">Contact</a>
-      </div>
+        <div class="nav-links">
+          <a href="#" class="active">Home</a>
+          <a href="#">About</a>
+          <a href="#">Projects</a>
+          <a href="#">Skill</a>
+          <a href="#">Contact</a>
+        </div>
 
-      <div class="nav-btn">
-        <a href="#">
-          Let's Talk
-        </a>
+        <div class="nav-btn-container">
+          <a href="#" class="nav-btn"> Let's Talk </a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero container">
+      <div class="hero-content">
+        <h1 class="hero-headline chillax">
+          Hi, I’m <span style="color: #737bff;">Orin</span> — I Build Digital Experiences
+        </h1>
+        <p class="hero-tagline chillax">
+          Full-stack developer crafting clean, scalable solutions.
+        </p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn-primary chillax">View My Work</a>
+          <a href="#contact" class="btn-secondary chillax">Let’s Connect</a>
+        </div>
       </div>
-    </nav>
-  </header>
-</body>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
 </html>
