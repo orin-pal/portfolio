@@ -2,12 +2,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: "Chillax", sans-serif;
 }
 html,
 body {
   width: 100%;
   height: 100%;
+}
+body {
+  background-color: var(--color-bg);
 }
 @font-face {
   font-family: QG;
@@ -17,12 +20,35 @@ body {
   font-family: Chillax;
   src: url(../assets/fonts/Chillax-Variable.ttf);
 }
+:root {
+  --color-acc-50: #edf0ff;
+  --color-acc-100: #dee5ff;
+  --color-acc-200: #c4ceff;
+  --color-acc-300: #a0aeff;
+  --color-acc-400: #737bff;
+  --color-acc-500: #5e5bf9;
+  --color-acc-600: #4d3dee;
+  --color-acc-700: #422fd3;
+  --color-acc-800: #3629aa;
+  --color-acc-900: #2f2986;
+  --color-acc-950: #1e184e;
+}
+.light-mode {
+  --color-bg: hsl(0, 0%, 93%);
+  --color-sec: hsl(0, 0%, 87%);
+  --color-text: hsl(0, 0%, 5%);
+  --color-text-fade: hsl(0, 0%, 27%);
+}
+.dark-mode {
+  --color-bg: hsl(0, 0%, 7%);
+  --color-sec: hsl(0, 0%, 13%);
+  --color-text: hsl(0, 0%, 95%);
+  --color-text-fade: hsl(0, 0%, 77%);
+}
+
 
 .qg {
   font-family: "QG", sans-serif;
-}
-.chillax {
-  font-family: "Chillax", sans-serif;
 }
 
 .container {
@@ -30,8 +56,7 @@ body {
   margin: 0 auto;
 }
 
-
-.background {
+/* .background {
   height: 1px;
   width: 1px;
   border-radius: 50%;
@@ -55,17 +80,17 @@ body {
   right: 40%;
   z-index: -1;
   opacity: 0.5;
-}
+} */
 
 #header a {
   text-decoration: none;
-  color: #000;
+  color: var(--color-text);
 }
 
 .logo a {
   font-family: "QG", sans-serif;
-  font-size: 2rem;
-  font-weight: bold;
+  font-size: 2.5rem;
+  font-weight: bolder;
 }
 
 #header {
@@ -82,11 +107,15 @@ body {
 #header.hide {
   transform: translateY(-100%);
 }
-#header .logo, #header .nav-btn-container {
-  width: 150px;
+#header .logo,
+#header .nav-btn-container {
+  width: 180px;
 }
 #header .nav-btn-container {
-  text-align: right;
+  display: flex;
+  align-items: start;
+  justify-content: flex-end;
+  gap: 20px;
 }
 
 #nav {
@@ -109,18 +138,44 @@ body {
   bottom: -4px;
   width: 6px;
   height: 6px;
-  background-color: #737bff;
+  background-color: var(--color-acc-500);
   border-radius: 50%;
   opacity: 1;
 }
 
 .nav-btn {
-  background-color: #737bff;
+  background-color: var(--color-acc-500);
   font-size: 1rem;
+  font-weight: bold;
   padding: 8px 16px;
   border-radius: 50px;
-  color: #fff !important;
+  color: var(--color-acc-50) !important;
 }
+
+/* Theme Toggle Button */
+.theme {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--color-sec);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Theme Button Icons */
+.theme img {
+  width: 24px;
+  height: 24px;
+  transition: opacity 0.3s ease;
+}
+
+.mark {
+  color: var(--color-acc-500);
+}
+
 
 /* Hero Section Styles */
 .hero {
@@ -129,7 +184,6 @@ body {
   align-items: center;
   height: 100vh;
   text-align: center;
-  color: #434343;
   padding: 80px 0;
 }
 
@@ -140,13 +194,14 @@ body {
 .hero-headline {
   font-size: 3rem;
   font-weight: bold;
+  color: var(--color-text-fade);
   margin-bottom: 20px;
-  animation: fadeIn 2s ease-in-out; /* Fade-in animation */
 }
 
 .hero-tagline {
   font-size: 1.5rem;
   margin-bottom: 70px;
+  color: var(--color-text);
 }
 
 .hero-buttons {
@@ -155,27 +210,25 @@ body {
   gap: 20px;
 }
 
-.btn-primary, .btn-secondary {
+.btn-primary,
+.btn-secondary {
   padding: 10px 20px;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: bold;
   border-radius: 5px;
   text-decoration: none;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .btn-primary {
-  background: #737bff;
-  color: white;
+  background: var(--color-acc-500);
+  color: var(--color-acc-50);
 }
 
 .btn-secondary {
   background: transparent;
-  border: 2px solid #737bff;
-  color: #737bff;
+  border: 3px solid var(--color-acc-500);
+  color: var(--color-acc-500);
 }
 
-.btn-primary:hover, .btn-secondary:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
+
