@@ -11,7 +11,15 @@ body {
 }
 body {
   background-color: var(--color-bg);
+  background-image:
+    radial-gradient(at 2% 57%, var(--bg-gr1) 0px, transparent 50%),
+    radial-gradient(at 53% 1%, var(--bg-gr2) 0px, transparent 50%),
+    radial-gradient(at 98% 88%, var(--bg-gr1) 0px, transparent 50%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
+
 @font-face {
   font-family: QG;
   src: url(../assets/fonts/QG.ttf);
@@ -38,12 +46,16 @@ body {
   --color-sec: hsl(0, 0%, 87%);
   --color-text: hsl(0, 0%, 5%);
   --color-text-fade: hsl(0, 0%, 27%);
+  --bg-gr1: hsl(231, 100%, 81%);
+  --bg-gr2: hsl(230, 100%, 88%);
 }
 .dark-mode {
   --color-bg: hsl(0, 0%, 7%);
   --color-sec: hsl(0, 0%, 13%);
   --color-text: hsl(0, 0%, 95%);
   --color-text-fade: hsl(0, 0%, 77%);
+  --bg-gr1:hsl(0, 0%, 19%);
+  --bg-gr2:hsl(0, 0%, 12%);
 }
 
 
@@ -55,32 +67,6 @@ body {
   width: min(95%, 1500px);
   margin: 0 auto;
 }
-
-/* .background {
-  height: 1px;
-  width: 1px;
-  border-radius: 50%;
-  background-color: rgba(117, 138, 255, 1);
-  box-shadow: 0px 0px 200px 150px rgba(25, 117, 255, 0.493);
-}
-.background.one {
-  position: fixed;
-  top: 50%;
-  z-index: -1;
-}
-.background.two {
-  position: fixed;
-  bottom: 10%;
-  right: 0;
-  z-index: -1;
-}
-.background.three {
-  position: fixed;
-  bottom: 70%;
-  right: 40%;
-  z-index: -1;
-  opacity: 0.5;
-} */
 
 #header a {
   text-decoration: none;
