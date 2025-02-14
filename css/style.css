@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Chillax", sans-serif;
+  -webkit-tap-highlight-color: transparent;
 }
 html,
 body {
